@@ -34,13 +34,10 @@ def is_digit(user_input_number):
     if not user_input_number:
         result = False
     else:
-        numbers = set(map(str, [i for i in range(10)]))
-        for ch in user_input_number:
-            if ch not in numbers:
-                result = False
-                break
-        else:
+        if user_input_number.isdigit():
             result = True
+        else:
+            result = False
     # ==================================
     return result
 
@@ -315,6 +312,6 @@ def main():
     print("Thank you for using this program")
     print("******* End of the Game ********")
 
-
+#main()
 if __name__ == "__main__":
     main()
