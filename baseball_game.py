@@ -288,12 +288,14 @@ def main():
         print("*** Play Baseball ***")
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number: ", random_number)
-        print("-----------------------")
+        #print("-----------------------")
         
         ball_count = [0, 0]
         while ball_count != [3, 0]:
             # Guess Start
             user_input_number = input("Input Guess Number: ")
+            if user_input_number == '0':
+                return
             if not is_validated_number(user_input_number):
                 print("Wrong Input, Input Again")
                 continue
