@@ -315,5 +315,7 @@ def main():
     print("Thank you for using this program")
     print("******* End of the Game ********")
 
-if __name__ == "__main__":
-    main()
+
+main()
+#if __name__ == "__main__":
+    #main()
