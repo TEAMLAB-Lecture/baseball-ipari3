@@ -282,33 +282,31 @@ def is_no(one_more_input):
 def main():
     # ===Modify codes below=============
     # 위의 코드를 포함하여 자유로운 수정이 가능함
-    one_more_input = 'y'
-    while is_yes(one_more_input):
+    user_input = 'y'
+    while is_yes(user_input):
         # Game Start
-        print("*** Play Baseball ***")
-        random_number = str(get_not_duplicated_three_digit_number())
+        print("Play Baseball")
+        user_input = 999
+        random_number = '102'#str(get_not_duplicated_three_digit_number())
         print("Random Number: ", random_number)
-        #print("-----------------------")
         
         ball_count = [0, 0]
         while ball_count != [3, 0]:
             # Guess Start
-            user_input_number = input("Input Guess Number: ")
-            if user_input_number == '0':
+            user_input = input("Input Guess Number: ")
+            if user_input == '0':
                 return
-            if not is_validated_number(user_input_number):
+            if not is_validated_number(user_input):
                 print("Wrong Input, Input Again")
                 continue
-            ball_count = get_strikes_or_ball(user_input_number, random_number)
+            ball_count = get_strikes_or_ball(user_input, random_number)
             print(f"Strikes : {ball_count[0]}, Balls : {ball_count[1]}")
         
-        #print("You Win! One More? (Y/N): ", end='')
-        print("Congratulations! One More? (Y/N): ", end='')
-        one_more_input = input()
-        while (not is_yes(one_more_input)) and (not is_no(one_more_input)):
-            print("Wrong Input... Input Again (Y/N): ", end='')
-            one_more_input = input()
-        print('\n\n')
+        print("You Win! One More? (Y/N): ")
+        user_input = input()
+        while (not is_yes(user_input)) and (not is_no(user_input)):
+            print("Wrong Input, Input Again (Y/N): ")
+            user_input = input()
     # ==================================
     print("Thank you for using this program")
     print("******* End of the Game ********")
