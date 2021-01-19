@@ -300,7 +300,7 @@ def main():
                 print("Wrong Input, Input Again")
                 continue
             ball_count = get_strikes_or_ball(user_input_number, random_number)
-            print(f"> S: {ball_count[0]}, B: {ball_count[1]}")
+            print(f"Strikes : {ball_count[0]}, Balls : {ball_count[1]}")
         
         #print("You Win! One More? (Y/N): ", end='')
         print("Congratulations! One More? (Y/N): ", end='')
