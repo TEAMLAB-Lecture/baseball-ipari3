@@ -293,8 +293,7 @@ def main():
         ball_count = [0, 0]
         while ball_count != [3, 0]:
             # Guess Start
-            print("Input Number: ", end='')
-            user_input_number = input()
+            user_input_number = input("Input Guess Number: ")
             if not is_validated_number(user_input_number):
                 print("Wrong Input, Input Again")
                 continue
@@ -312,6 +311,5 @@ def main():
     print("Thank you for using this program")
     print("******* End of the Game ********")
 
-#main()
 if __name__ == "__main__":
     main()
